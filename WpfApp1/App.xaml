@@ -1,0 +1,351 @@
+﻿<Application x:Class="WpfApp1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:一言"
+
+			 xmlns:s="https://github.com/canton7/Stylet">
+	<!--定义应用程序级资源-->
+	<Application.Resources>
+		<!--创建资源字典-->
+		<!--<ResourceDictionary Source="pack://application:,,,/AduSkin;component/Themes/AduSkin.xaml"/>-->
+		<ResourceDictionary >
+			<!--合并其他资源字典-->
+			<ResourceDictionary.MergedDictionaries>
+				<!--引入暗色主题资源字典-->
+				<ResourceDictionary Source="/DynamicTheme.Resources;component/DarkTheme.xaml"/>
+
+				<ResourceDictionary Source="/DynamicTheme.Resources;component/PropertyTheme .xaml"/>
+
+				<s:ApplicationLoader>
+					<s:ApplicationLoader.Bootstrapper>
+						<local:Bootstrapper/>
+					</s:ApplicationLoader.Bootstrapper>
+				</s:ApplicationLoader>
+
+
+			</ResourceDictionary.MergedDictionaries>
+
+			<!-- 定义ToggleButton1的样式 -->
+			<Style x:Key="ToggleButtonStyle1" TargetType="{x:Type ToggleButton}">
+				<!-- 设置按钮背景色，使用动态资源 -->
+				<Setter Property="Background" Value="{DynamicResource FontBrush}"/>
+				<!-- 设置按钮前景色（文字颜色），使用动态资源 -->
+				<Setter Property="Foreground" Value="{DynamicResource BackgroundBrush}"/>
+				<!-- 设置按钮边框颜色，使用动态资源 -->
+				<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+				<!-- 可选：设置一些其他属性，比如内边距和外边距 -->
+
+				<!-- 定义按钮模板 -->
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type ToggleButton}">
+							<!-- 自定义按钮的外观 -->
+							<Border x:Name="border"  
+                                    Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="1" 
+                                    CornerRadius="4">
+								<!-- 创建一个边框，用于按钮的外观，绑定按钮的背景色和边框颜色，设置圆角半径 -->
+								<TextBlock x:Name="text" 
+                                           Text="{TemplateBinding Content}" 
+                                           HorizontalAlignment="Center" 
+                                           VerticalAlignment="Center" 
+                                           Foreground="{TemplateBinding Foreground}"/>
+								<!-- 创建一个TextBlock，用于显示按钮的文本，绑定按钮的内容和前景色，水平和垂直居中对齐 -->
+							</Border>
+
+							<!--<ControlTemplate.Triggers>
+								-->
+							<!-- 当按钮被选中时触发 -->
+							<!--
+								<Trigger Property="IsChecked" Value="True">
+									-->
+							<!-- 触发器检查IsChecked属性，当值为True时触发 -->
+							<!-- 更改背景色为动态资源BackgroundBrush -->
+							<!--
+									<Setter TargetName="border" Property="Background" Value="{DynamicResource BackgroundBrush}"/>
+									-->
+							<!-- 更改文本颜色为动态资源FontBrush -->
+							<!--
+									<Setter TargetName="text" Property="Foreground" Value="{DynamicResource FontBrush}"/>
+									-->
+							<!-- 可选：当按钮被选中时，改变显示的文本 -->
+							<!--
+									<Setter TargetName="text" Property="Text" Value="切换主题2"/>
+								</Trigger>
+							</ControlTemplate.Triggers>-->
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+
+			<!-- 定义ToggleButton2的样式 -->
+			<Style x:Key="ToggleButtonStyle2" TargetType="{x:Type ToggleButton}">
+				<!-- 设置按钮背景色，使用动态资源 -->
+				<Setter Property="Background" Value="{DynamicResource FontBrush}"/>
+				<!-- 设置按钮前景色（文字颜色），使用动态资源 -->
+				<Setter Property="Foreground" Value="{DynamicResource BackgroundBrush}"/>
+				<!-- 设置按钮边框颜色，使用动态资源 -->
+				<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+
+				<!-- 设置按钮标签，用于切换状态时显示 -->
+				<Setter Property="Tag" Value="切换主题2"/>
+
+				<!-- 定义按钮模板 -->
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type ToggleButton}">
+							<!-- 自定义按钮的外观 -->
+							<Border x:Name="border"  
+                        Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="1" 
+                        CornerRadius="4">
+								<!-- 创建一个边框，用于按钮的外观，绑定按钮的背景色和边框颜色，设置圆角半径 -->
+								<TextBlock x:Name="text" 
+                               Text="{TemplateBinding Content}" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center" 
+                               Foreground="{TemplateBinding Foreground}"/>
+								<!-- 创建一个TextBlock，用于显示按钮的文本，绑定按钮的内容和前景色，水平和垂直居中对齐 -->
+							</Border>
+
+							<!-- 定义触发器，用于切换按钮状态 -->
+							<ControlTemplate.Triggers>
+								<!-- 当按钮被选中时触发 -->
+								<Trigger Property="IsChecked" Value="True">
+									<!-- 更改背景色 -->
+									<Setter Property="Background" Value="{DynamicResource FontBrush}"/>
+									<!-- 更改前景色 -->
+									<Setter Property="Foreground" Value="{DynamicResource BackgroundBrush}"/>
+									<!-- 更改按钮文本为Tag属性的值 -->
+									<Setter TargetName="text" Property="Text" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Tag}"/>
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+
+			<!--<Style x:Key="ComboBoxStyle" TargetType="{x:Type ComboBox}">
+				 --><!--设置按钮背景色，使用动态资源--><!-- 
+				<Setter Property="Background" Value="{DynamicResource FontBrush}"/>
+				 --><!--设置按钮前景色（文字颜色），使用动态资源--><!-- 
+				<Setter Property="Foreground" Value="{DynamicResource BackgroundBrush}"/>
+				 --><!--设置按钮边框颜色，使用动态资源--><!-- 
+				<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+				 --><!--可选：设置一些其他属性，比如内边距和外边距--><!-- 
+			</Style>-->
+
+
+			<Style x:Key="ComboBoxItemStyle" TargetType="ComboBoxItem">
+				<!-- 定义一个用于 ComboBoxItem 的样式，使用 x:Key 进行命名，TargetType 设为 ComboBoxItem -->
+
+				<Setter Property="Foreground" Value="{DynamicResource BackgroundBrush}"/>
+				<!-- 设置 ComboBoxItem 的前景色为动态资源 BackgroundBrush -->
+
+				<Setter Property="VerticalContentAlignment" Value="Center"/>
+				<!-- 设置内容垂直对齐方式为居中 -->
+
+				<Setter Property="Height" Value="40"/>
+				<!-- 设置 ComboBoxItem 的高度为40像素 -->
+
+				<Setter Property="Template">
+					<!-- 设置 ComboBoxItem 的模板样式 -->
+
+					<Setter.Value>
+						<ControlTemplate TargetType="ComboBoxItem">
+							<!-- 定义 ControlTemplate 的目标类型为 ComboBoxItem -->
+
+							<Border Name="Back" 
+                        Background="{TemplateBinding Background}" 
+                        BorderThickness="0,0,0,0" 
+                        BorderBrush="{DynamicResource FontBrush}">
+								<!-- 定义一个名为 Back 的边框，背景绑定到 ComboBoxItem 的背景属性，边框颜色为 FontBrush -->
+
+								<ContentPresenter ContentSource="{Binding Source}" 
+                                      Margin="{TemplateBinding Padding}" 
+                                      HorizontalAlignment="Left" 
+                                      VerticalAlignment="Center"/>
+								<!-- 使用 ContentPresenter 显示 ComboBoxItem 的内容，绑定 Source 数据源，设置水平对齐为左对齐，垂直居中对齐 -->
+
+							</Border>
+
+							<ControlTemplate.Triggers>
+								<!-- 定义模板中的触发器，用于响应特定属性的状态变化 -->
+
+								<Trigger Property="IsHighlighted" Value="True">
+									<!-- 当 ComboBoxItem 被鼠标高亮时触发 -->
+
+									<Setter TargetName="Back" 
+                                Property="Background" 
+                                Value="{DynamicResource FontBrush}"/>
+									<!-- 设置名为 Back 的边框背景为动态资源 FontBrush，即鼠标悬停时的背景颜色 -->
+								</Trigger>
+
+								<Trigger Property="IsSelected" Value="True">
+									<!-- 当 ComboBoxItem 被选中时触发 -->
+
+									<Setter TargetName="Back" 
+                                Property="Background" 
+                                Value="#FFCBE3FE"/>
+									<!-- 设置名为 Back 的边框背景颜色为固定值 #FFCBE3FE（浅蓝色），即被选中时的背景颜色 -->
+								</Trigger>
+
+							</ControlTemplate.Triggers>
+
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+
+			</Style>
+
+
+			<Style x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+				<!-- 覆盖默认样式 -->
+				<Setter Property="OverridesDefaultStyle" Value="true"/>
+				<!-- 禁止Tab键聚焦 -->
+				<Setter Property="IsTabStop" Value="false"/>
+				<!-- 禁止按钮获取焦点 -->
+				<Setter Property="Focusable" Value="false"/>
+				<!-- 设置按钮点击模式为按下时触发 -->
+				<Setter Property="ClickMode" Value="Press"/>
+				<!-- 设置按钮的模板 -->
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type ToggleButton}">
+							<!-- 外边框 -->
+							<Border x:Name="templateRoot" CornerRadius="4" SnapsToDevicePixels="true" 
+                        Background="{TemplateBinding Background}" 
+                        BorderThickness="{TemplateBinding BorderThickness}" 
+                        BorderBrush="{DynamicResource BackgroundBrush}">
+								<!-- 内边框，右侧的分割部分 -->
+								<Border x:Name="splitBorder" CornerRadius="4" Width="40" SnapsToDevicePixels="true" 
+                            Margin="0" HorizontalAlignment="Right" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{DynamicResource BackgroundBrush}">
+									<!-- 分割部分的背景色，线性渐变为粉色 -->
+									<Border.Background>
+										<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+											<GradientStop Color="{DynamicResource {x:Static SystemColors.ControlTextColor}}" Offset="0"/>
+											<GradientStop Color="{DynamicResource {x:Static SystemColors.ControlTextColor}}" Offset="0.75"/>
+										</LinearGradientBrush>
+									</Border.Background>
+									<!-- 箭头图标，位于右侧按钮中，用于下拉提示 -->
+									<Path x:Name="arrow" VerticalAlignment="Center" Margin="9,0,0,0" 
+                              Stretch="Fill" Height="12" Width="16" HorizontalAlignment="Left" 
+                              Fill="{DynamicResource BackgroundBrush}" Data="M 50,50 L 0,0 100,0 z"/>
+								</Border>
+							</Border>
+							<!-- 控件模板的触发器 -->
+							<ControlTemplate.Triggers>
+								<!-- 当 ComboBox 是可编辑的且鼠标不悬停、按钮未按下且控件可用时，改变外边框颜色 -->
+								<MultiDataTrigger>
+									<MultiDataTrigger.Conditions>
+										<Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
+										<Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="false"/>
+										<Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="false"/>
+										<Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="true"/>
+									</MultiDataTrigger.Conditions>
+									<Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource FontBrush}"/>
+								</MultiDataTrigger>
+								<!-- 当控件不可用时，设置箭头和边框为粉色 -->
+								<Trigger Property="IsEnabled" Value="false">
+									<Setter Property="Fill" TargetName="arrow" Value="{DynamicResource BackgroundBrush}"/>
+									<Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BackgroundBrush}"/>
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+
+
+			<!--外观样式使用Template，
+
+①Template样式，popup为下拉框效果，使用ItemsPanel （StackPanel），并设定IsItemsHost="True"，即绑定了原控件的items显示，不使用itemsPresenter，否则会继续出现原item默认效果（如鼠标划过去蓝色背景...）
+
+②Template样式，HasDropShadow触发器，设置的下拉框边框阴影-->
+
+			<!-- ComboBox Template样式 -->
+			<ControlTemplate x:Key="ComboBoxTemplate" TargetType="{x:Type ComboBox}">
+				<Grid x:Name="templateRoot" SnapsToDevicePixels="true">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition Width="0"/>
+					</Grid.ColumnDefinitions>
+					<Popup x:Name="PART_Popup" AllowsTransparency="true" Grid.ColumnSpan="2" IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" 
+                       PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom">
+						<Border x:Name="dropDownBorder" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" BorderThickness="1" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" 
+                            MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=templateRoot}">
+							<ScrollViewer x:Name="DropDownScrollViewer">
+								<Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
+									<Canvas x:Name="canvas" HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
+										<Rectangle x:Name="opaqueRect" Fill="{Binding Background, ElementName=dropDownBorder}" Height="{Binding ActualHeight, ElementName=dropDownBorder}" Width="{Binding ActualWidth, ElementName=dropDownBorder}"/>
+									</Canvas>
+									<StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Continue" Background="{DynamicResource {x:Static SystemColors.ControlTextColor}}"/>  <!--下拉框选择背景色-->
+									<!--<ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Contained" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>-->
+								</Grid>
+							</ScrollViewer>
+						</Border>
+					</Popup>
+					<Border Grid.ColumnSpan="2" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="4">
+						<Grid>
+							<ToggleButton x:Name="toggleButton" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Background="{TemplateBinding Background}" Grid.ColumnSpan="2" 
+                                      IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Style="{StaticResource ComboBoxToggleButton}"/>
+							<ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" 
+                                          Content="{TemplateBinding SelectionBoxItem}" ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                          IsHitTestVisible="false" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+						</Grid>
+					</Border>
+				</Grid>
+				<ControlTemplate.Triggers>
+					<!--<Trigger Property="HasDropShadow" SourceName="PART_Popup" Value="true">  
+                        <Setter Property="Margin" TargetName="shadow" Value="0,0,5,5"/>  
+                        <Setter Property="Color" TargetName="shadow" Value="#71000000"/>  
+                    </Trigger>-->
+					<Trigger Property="HasItems" Value="false">
+						<Setter Property="Height" TargetName="dropDownBorder" Value="95"/>
+					</Trigger>
+					<MultiTrigger>
+						<MultiTrigger.Conditions>
+							<Condition Property="IsGrouping" Value="true"/>
+							<Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false"/>
+						</MultiTrigger.Conditions>
+						<Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+					</MultiTrigger>
+					<Trigger Property="ScrollViewer.CanContentScroll" SourceName="DropDownScrollViewer" Value="false">
+						<Setter Property="Canvas.Top" TargetName="opaqueRect" Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}"/>
+						<Setter Property="Canvas.Left" TargetName="opaqueRect" Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}"/>
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+			<!--最后把以上样式放入到style属性中，样式布局就搞定了-->
+			<!-- ComboBox属性设置 -->
+			<Style x:Key="ComboBoxStyle" TargetType="{x:Type ComboBox}">
+				<Setter Property="Background">
+					<Setter.Value>
+						<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+							<GradientStop Color="{DynamicResource {x:Static SystemColors.ControlTextColor}}" Offset="0"/>  <!--按钮背景阴影-->
+							<GradientStop Color="{DynamicResource {x:Static SystemColors.ControlTextColor}}" Offset="0.75"/> <!--按钮背景-->
+						</LinearGradientBrush>
+					</Setter.Value>
+				</Setter>
+				<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>   <!--边框-->
+				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
+				<Setter Property="BorderThickness" Value="1"/>
+				<Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+				<Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+				<Setter Property="Padding" Value="6,3,5,3"/>
+				<Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+				<Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+				<Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+				<Setter Property="VerticalContentAlignment" Value="Center"/>
+				<Setter Property="ItemContainerStyle" Value="{DynamicResource ComboBoxItemStyle}"/>
+				<Setter Property="Template" Value="{StaticResource ComboBoxTemplate}"/>
+			</Style>
+
+		</ResourceDictionary>
+	</Application.Resources>
+
+</Application> 

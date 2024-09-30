@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "一言", "一言.csproj", "{CAB10677-7F71-4A49-82B1-278DE27D1E01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{B0921E04-82BA-4591-9A01-49F7E10DEE74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTheme.Resources", "..\DynamicTheme.Resources\DynamicTheme.Resources.csproj", "{A5E29F01-06A1-4A37-A2D6-9E3D4C12FC1B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{18E4CFC0-B49A-4B2E-AF06-A7753E9BE3F5} = {18E4CFC0-B49A-4B2E-AF06-A7753E9BE3F5}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTheme.Core", "..\DynamicTheme.Core\DynamicTheme.Core.csproj", "{18E4CFC0-B49A-4B2E-AF06-A7753E9BE3F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAB10677-7F71-4A49-82B1-278DE27D1E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB10677-7F71-4A49-82B1-278DE27D1E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB10677-7F71-4A49-82B1-278DE27D1E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB10677-7F71-4A49-82B1-278DE27D1E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E29F01-06A1-4A37-A2D6-9E3D4C12FC1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E29F01-06A1-4A37-A2D6-9E3D4C12FC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E29F01-06A1-4A37-A2D6-9E3D4C12FC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E29F01-06A1-4A37-A2D6-9E3D4C12FC1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E4CFC0-B49A-4B2E-AF06-A7753E9BE3F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E4CFC0-B49A-4B2E-AF06-A7753E9BE3F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E4CFC0-B49A-4B2E-AF06-A7753E9BE3F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E4CFC0-B49A-4B2E-AF06-A7753E9BE3F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_ConfirmAddLanguageFile = True
+		RESX_AutoCreateNewLanguageFiles = True
+		RESX_NeutralResourcesLanguage = en-001
+		SolutionGuid = {2182F790-5E81-41B6-B3C5-6E83133F001A}
+		RESX_PrefixTranslations = False
+		RESX_CodeReferences = {"Items":[{"Expression":"\\W($File.$Key)\\W","Extensions":".cs,.xaml,.cshtml","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"\\W($File.$Key)\\W","Extensions":".vbhtml","IsCaseSensitive":false,"SingleLineComment":null},{"Expression":"ResourceManager.GetString\\(\"($Key)\"\\)","Extensions":".cs","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"typeof\\((\\w+\\.)*($File)\\).+\"($Key)\"|\"($)\".+typeof\\((\\w+\\.)*($File)\\)","Extensions":".cs","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"\\W($Key)\\W","Extensions":".vb","IsCaseSensitive":false,"SingleLineComment":"'"},{"Expression":"\\W($File::$Key)\\W","Extensions":".cpp,.c,.hxx,.h","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"&lt;%\\$\\s+Resources:\\s*($File)\\s*,\\s*($Key)\\s*%&gt;","Extensions":".aspx,.ascx,.master","IsCaseSensitive":true,"SingleLineComment":null},{"Expression":"StringResourceKey\\.($Key)","Extensions":".cs","IsCaseSensitive":true,"SingleLineComment":"\/\/"},{"Expression":"\\.($Key)","Extensions":".ts,.html","IsCaseSensitive":true,"SingleLineComment":"\/\/"}]}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<!-- 定义背景画刷，颜色为深灰色 (#333333) -->
+	<SolidColorBrush x:Key="BackgroundBrush" Color="#333333"/>
+
+	<!-- 定义字体画刷，颜色为粉红色 -->
+	<SolidColorBrush x:Key="FontBrush" Color="Pink"/>
+
+	<!-- 定义边框画刷，颜色为半透明的浅粉色 (#AAFFC0CB) -->
+	<SolidColorBrush x:Key="BorderBrush" Color="#AAFFC0CB"/>
+</ResourceDictionary>

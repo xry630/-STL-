@@ -1,0 +1,11 @@
+E:\桌面\Temporary files\一言\DynamicTheme.Core\obj\Debug\net8.0-windows\DynamicTheme.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\桌面\Temporary files\一言\DynamicTheme.Core\obj\Debug\net8.0-windows\DynamicTheme.Core.AssemblyInfoInputs.cache
+E:\桌面\Temporary files\一言\DynamicTheme.Core\obj\Debug\net8.0-windows\DynamicTheme.Core.AssemblyInfo.cs
+E:\桌面\Temporary files\一言\DynamicTheme.Core\obj\Debug\net8.0-windows\DynamicTheme.Core.csproj.CoreCompileInputs.cache
+E:\桌面\Temporary files\一言\DynamicTheme.Core\bin\Debug\net8.0-windows\DynamicTheme.Core.deps.json
+E:\桌面\Temporary files\一言\DynamicTheme.Core\bin\Debug\net8.0-windows\DynamicTheme.Core.dll
+E:\桌面\Temporary files\一言\DynamicTheme.Core\bin\Debug\net8.0-windows\DynamicTheme.Core.pdb
+E:\桌面\Temporary files\一言\DynamicTheme.Core\obj\Debug\net8.0-windows\DynamicTheme.Core.dll
+E:\桌面\Temporary files\一言\DynamicTheme.Core\obj\Debug\net8.0-windows\refint\DynamicTheme.Core.dll
+E:\桌面\Temporary files\一言\DynamicTheme.Core\obj\Debug\net8.0-windows\DynamicTheme.Core.pdb
+E:\桌面\Temporary files\一言\DynamicTheme.Core\obj\Debug\net8.0-windows\ref\DynamicTheme.Core.dll

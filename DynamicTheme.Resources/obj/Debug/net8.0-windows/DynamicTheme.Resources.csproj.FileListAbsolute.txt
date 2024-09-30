@@ -1,0 +1,16 @@
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\DarkTheme.baml
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\LightTheme.baml
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\DynamicTheme.Resources_MarkupCompile.cache
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\DynamicTheme.Resources.g.resources
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\DynamicTheme.Resources.GeneratedMSBuildEditorConfig.editorconfig
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\DynamicTheme.Resources.AssemblyInfoInputs.cache
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\DynamicTheme.Resources.AssemblyInfo.cs
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\DynamicTheme.Resources.csproj.CoreCompileInputs.cache
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\PropertyTheme .baml
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\bin\Debug\net8.0-windows\DynamicTheme.Resources.deps.json
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\bin\Debug\net8.0-windows\DynamicTheme.Resources.dll
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\bin\Debug\net8.0-windows\DynamicTheme.Resources.pdb
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\DynamicTheme.Resources.dll
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\refint\DynamicTheme.Resources.dll
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\DynamicTheme.Resources.pdb
+E:\桌面\Temporary files\一言\DynamicTheme.Resources\obj\Debug\net8.0-windows\ref\DynamicTheme.Resources.dll

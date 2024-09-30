@@ -1,0 +1,109 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<!-- 定义 TextBox 的样式 -->
+	<Style TargetType="TextBox">
+		<!-- 设置字体大小为 14 -->
+		<Setter Property="FontSize" Value="14"/>
+		<!-- 设置 TextBox 的外边距 -->
+		<Setter Property="Margin" Value="0,5,0,5"/>
+		<!-- 设置 TextBox 的内边距 -->
+		<Setter Property="Padding" Value="5"/>
+		<!-- 设置 TextBox 的边框颜色 -->
+		<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+		<!-- 设置 TextBox 的背景色 -->
+		<Setter Property="Background" Value="{DynamicResource FontBrush}"/>
+		<!--设置按钮边框颜色，使用动态资源-->
+		<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+		<!-- 设置 TextBox 的前景色 (字体颜色)，使用动态资源 -->
+		<Setter Property="Foreground" Value="{DynamicResource BackgroundBrush}" />
+		<!-- 设置文字自动换行 -->
+		<Setter Property="TextWrapping" Value="Wrap"/>
+		<!-- 设置 TextBox 为只读模式 -->
+		<Setter Property="IsReadOnly" Value="True"/>
+		<!-- 设置 TextBox 垂直对齐方式 -->
+		<Setter Property="VerticalAlignment" Value="Stretch"/>
+		<!-- 设置 TextBox 水平对齐方式 -->
+		<Setter Property="HorizontalAlignment" Value="Stretch"/>
+		<!-- 设置 TextBox 的最小高度 -->
+		<Setter Property="MinHeight" Value="50"/>
+	</Style>
+
+	<!--定义ToggleButton的样式-->
+	<Style TargetType="{x:Type ToggleButton}">
+		<!--设置鼠标悬停时的光标样式-->
+		<Setter Property="Cursor" Value="Hand"/>
+		<!--设置按钮默认内容-->
+		<Setter Property="Content" Value="Dark Theme"/>
+		<!--设置按钮标签，用于切换状态时显示-->
+		<Setter Property="Tag" Value="Light Theme"/>
+
+		<!--设置按钮文字大小-->
+		<Setter Property="FontSize" Value="14"/>
+		<!-- 设置按钮宽度为 80 -->
+		<Setter Property="Width" Value="80"/>
+		<!-- 设置按钮高度为 30 -->
+		<Setter Property="Height" Value="30"/>
+		<!-- 设置按钮外边距 -->
+		<Setter Property="Margin" Value="5"/>
+		<!-- 设置按钮水平对齐方式为居中 -->
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+
+		<!--设置按钮背景色，使用动态资源-->
+		<Setter Property="Background" Value="{DynamicResource FontBrush}"/>
+		<!--设置按钮前景色（文字颜色），使用动态资源-->
+		<Setter Property="Foreground" Value="{DynamicResource BackgroundBrush}"/>
+		<!--设置按钮边框颜色，使用动态资源-->
+		<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+		<!--设置按钮文字粗细-->
+		<Setter Property="FontWeight" Value="Normal"/>
+	</Style>
+
+	<!-- 定义 Border 的样式 -->
+	<Style TargetType="Border">
+		<!-- 设置边框颜色为浅灰色 -->
+		<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+		<!-- 设置边框厚度为 1 -->
+		<Setter Property="BorderThickness" Value="1"/>
+		<!-- 设置边框圆角半径为 1 -->
+		<Setter Property="CornerRadius" Value="1"/>
+		<!-- 设置 TextBox 的边框颜色 -->
+		<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+		<!-- 设置 TextBox 的背景色 -->
+		<Setter Property="Background" Value="{DynamicResource FontBrush}"/>
+		<!--设置按钮边框颜色，使用动态资源-->
+		<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+		<!-- 设置边框内边距 -->
+		<Setter Property="Padding" Value="10"/>
+	</Style>
+
+	<!-- 定义下拉菜单的样式 --><!--
+	<Style TargetType="ComboBox">
+		--><!-- 设置边框颜色为浅灰色 --><!--
+		<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+		--><!-- 设置边框厚度为 1 --><!--
+		<Setter Property="BorderThickness" Value="1"/>
+		--><!-- 设置边框圆角半径为 1 -->
+		<!--<Setter Property="CornerRadius" Value="1"/>-->
+		<!-- 设置 TextBox 的背景色 --><!--
+		<Setter Property="Background" Value="{DynamicResource FontBrush}"/>
+		--><!--设置按钮边框颜色，使用动态资源--><!--
+		<Setter Property="BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+		--><!-- 设置内边距 --><!--
+		<Setter Property="Padding" Value="10"/>
+		--><!-- 设置下拉列表的背景色 --><!--
+		<Setter Property="ItemContainerStyle">
+			<Setter.Value>
+				<Style TargetType="ComboBoxItem">
+					<Setter Property="Background" Value="{DynamicResource FontBrush}"/>
+					--><!-- 设置下拉项背景色 --><!--
+					<Setter Property="Foreground" Value="{DynamicResource BackgroundBrush}"/>
+					--><!-- 设置下拉项文本颜色 --><!--
+				</Style>
+			</Setter.Value>
+		</Setter>
+	</Style>-->
+
+	
+
+
+</ResourceDictionary>

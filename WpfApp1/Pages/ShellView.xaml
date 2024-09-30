@@ -1,0 +1,100 @@
+﻿<Window x:Class="一言.Pages.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:一言.Pages"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        xmlns:theme="clr-namespace:DynamicTheme.Core;assembly=DynamicTheme.Core"
+        xmlns:adu="clr-namespace:AduSkin;assembly=AduSkin"
+        lex:ResxLocalizationProvider.DefaultAssembly="一言"
+        lex:ResxLocalizationProvider.DefaultDictionary="Langs"
+        lex:LocalizeDictionary.DesignCulture="zh-CN"
+        mc:Ignorable="d"
+        Title="Stylet Start Project" Height="390" Width="570"
+        xmlns:s="https://github.com/canton7/Stylet"
+        theme:ThemeProps.Background="{DynamicResource FontBrush}"
+        d:DataContext="{d:DesignInstance local:ShellViewModel}">
+
+	<!-- 布局中的 Grid -->
+	<Grid>
+		<!-- 定义三行 -->
+		<Grid.RowDefinitions>
+			<RowDefinition Height="60"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="60"/>
+		</Grid.RowDefinitions>
+
+		<!-- 标题 -->
+		<TextBlock x:Name="TitleTextBlock" 
+                   FontSize="30" 
+                   Margin="10" 
+                   HorizontalAlignment="Center" 
+                   Grid.Row="0" 
+                   theme:ThemeProps.Foreground="{DynamicResource BackgroundBrush}"/>
+
+		<!-- 主内容区域 -->
+		<StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Stretch" Margin="10,0" HorizontalAlignment="Stretch">
+			<!-- 显示诗句 -->
+			<Border>
+				<StackPanel>
+					<TextBlock Text="{lex:Loc a_poem}" theme:ThemeProps.Foreground="{DynamicResource BackgroundBrush}"/>
+					<TextBox x:Name="PoemTextBox" VerticalAlignment="Stretch" IsReadOnly="True" MouseDoubleClick="TextBox_MouseDoubleClick"/>
+				</StackPanel>
+			</Border>
+
+			<!-- 显示短语 -->
+			<Border>
+				<StackPanel>
+					<TextBlock Text="{lex:Loc hitokoto}" theme:ThemeProps.Foreground="{DynamicResource BackgroundBrush}"/>
+					<TextBox x:Name="HitokotoTextBox" VerticalAlignment="Stretch" IsReadOnly="True" MouseDoubleClick="TextBox_MouseDoubleClick"/>
+				</StackPanel>
+			</Border>
+		</StackPanel>
+
+		<!-- 按钮区域 -->
+		<StackPanel Orientation="Horizontal" Grid.Row="2" Margin="30,0,30,0" HorizontalAlignment="Center">
+			<!-- 刷新按钮 -->
+			<ToggleButton x:Name="RefreshButton" 
+                          Content="{lex:Loc flushed}" 
+                          IsChecked="False" 
+                          Click="RefreshButton_Click" 
+                          Margin="10"
+                          Height="40" 
+                          Style="{StaticResource ToggleButtonStyle1}" Width="100"/>
+
+			<!--<ComboBox Name="samplenoSource" FontFamily="FZLTZHUNHK" FontSize="12" Foreground="#FF545454" Width="412" Height="54" BorderBrush="#FF565656" VerticalContentAlignment="Center" 
+              Padding="65,0,0,0" IsEditable="False" Style="{DynamicResource ComboBoxStyle}" SelectedIndex="2">
+				<ComboBox.Background>
+					<LinearGradientBrush EndPoint="0,1">
+						<GradientStop Color="#FFF9F8F8"/>
+						<GradientStop Color="#FFC6C6CA" Offset="0.75"/>
+					</LinearGradientBrush>
+				</ComboBox.Background>
+				<ComboBoxItem Content="自动递增（A）" Padding="65,0,0,0"/>
+				<ComboBoxItem Content="ID条码阅读器（B）" Padding="65,0,0,0"/>
+				<ComboBoxItem Content="手工设定（M）" Padding="65,0,0,0"/>
+				<ComboBoxItem Content="电脑设定（C）" Padding="65,0,0,0"/>
+			</ComboBox>-->
+
+
+			<ComboBox x:Name="LanguageComboBox" FontFamily="FZLTZHUNHK" Width="120" Height="40" Margin="10" IsEditable="False" VerticalContentAlignment="Center" Foreground="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BackgroundBrush}" 
+          SelectionChanged="LanguageComboBox_SelectionChanged" Style="{DynamicResource ComboBoxStyle}" SelectedIndex="1">
+				<ComboBoxItem Content="{lex:Loc ens}" Tag="en"/>
+				<ComboBoxItem Content="{lex:Loc chinese}" Tag="zh-CN"/>
+				<ComboBoxItem Content="{lex:Loc russian}" Tag="ru"/>
+			</ComboBox>
+
+			<!-- 主题切换按钮 -->
+			<ToggleButton x:Name="ThemeToggleButton"
+                          Content="{lex:Loc switch_Theme_1}"
+                          Tag="{lex:Loc switch_Theme_2}"
+                          IsChecked="False"
+                          Checked="ThemeToggleButton_Checked"
+                          Unchecked="ThemeToggleButton_Unchecked"
+                          Margin="10" 
+                          Height="40" 
+                          Style="{StaticResource ToggleButtonStyle2}" Width="150"/>
+		</StackPanel>
+	</Grid>
+</Window>
